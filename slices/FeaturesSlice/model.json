@@ -1,0 +1,22 @@
+{
+    "id": "features_slice",
+    "type": "SharedSlice",
+    "name": "FeaturesSlice",
+    "description": "FeaturesSlice",
+    "variations": [
+        {
+            "id": "default",
+            "name": "Default",
+            "docURL": "...",
+            "version": "initial",
+            "description": "Default",
+            "imageUrl": "",
+            "primary": { "title": { "type": "Text", "config": { "label": "title", "placeholder": "" } } },
+            "items": {
+                "icon": { "type": "Image", "config": { "label": "icon", "constraint": {}, "thumbnails": [] } },
+                "title": { "type": "Text", "config": { "label": "title", "placeholder": "" } },
+                "description": { "type": "Text", "config": { "label": "description", "placeholder": "" } }
+            }
+        }
+    ]
+}

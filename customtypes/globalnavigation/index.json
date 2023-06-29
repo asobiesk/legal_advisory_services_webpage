@@ -1,0 +1,20 @@
+{
+    "id": "globalnavigation",
+    "label": "GlobalNavigation",
+    "format": "custom",
+    "repeatable": false,
+    "status": true,
+    "json": {
+        "Main": {
+            "logo": { "type": "Image", "config": { "label": "Logo", "constraint": {}, "thumbnails": [] } },
+            "mainlink": { "type": "Link", "config": { "label": "mainlink", "placeholder": "", "select": null } },
+            "contactlink": { "type": "Link", "config": { "label": "contactLink", "placeholder": "", "select": null } },
+            "contacttext": { "type": "Text", "config": { "label": "contacttext", "placeholder": "" } },
+            "slices": {
+                "type": "Slices",
+                "fieldset": "Slice Zone",
+                "config": { "choices": { "navigation_item": { "type": "SharedSlice" } } }
+            }
+        }
+    }
+}

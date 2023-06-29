@@ -1,0 +1,23 @@
+{
+    "id": "client_reviews_slice",
+    "type": "SharedSlice",
+    "name": "ClientReviewsSlice",
+    "description": "ClientReviewsSlice",
+    "variations": [
+        {
+            "id": "default",
+            "name": "Default",
+            "docURL": "...",
+            "version": "initial",
+            "description": "Default",
+            "imageUrl": "",
+            "primary": {},
+            "items": {
+                "image": { "type": "Image", "config": { "label": "image", "constraint": {}, "thumbnails": [] } },
+                "clientname": { "type": "Text", "config": { "label": "clientName", "placeholder": "" } },
+                "clientcountry": { "type": "Text", "config": { "label": "clientCountry", "placeholder": "" } },
+                "review": { "type": "Text", "config": { "label": "review", "placeholder": "" } }
+            }
+        }
+    ]
+}

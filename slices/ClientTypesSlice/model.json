@@ -1,0 +1,26 @@
+{
+    "id": "client_types_slice",
+    "type": "SharedSlice",
+    "name": "ClientTypesSlice",
+    "description": "ClientTypesSlice",
+    "variations": [
+        {
+            "id": "default",
+            "name": "Default",
+            "docURL": "...",
+            "version": "initial",
+            "description": "Default",
+            "imageUrl": "",
+            "primary": {
+                "image": { "type": "Image", "config": { "label": "image", "constraint": {}, "thumbnails": [] } },
+                "title": { "type": "Text", "config": { "label": "title", "placeholder": "" } }
+            },
+            "items": {
+                "clienttype": { "type": "Text", "config": { "label": "clientType", "placeholder": "" } },
+                "description": { "type": "Text", "config": { "label": "description", "placeholder": "" } },
+                "linktext": { "type": "Text", "config": { "label": "linkText", "placeholder": "" } },
+                "link": { "type": "Link", "config": { "label": "link", "placeholder": "", "select": null } }
+            }
+        }
+    ]
+}

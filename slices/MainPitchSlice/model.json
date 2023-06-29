@@ -1,0 +1,53 @@
+{
+    "id": "main_pitch_slice",
+    "type": "SharedSlice",
+    "name": "MainPitchSlice",
+    "description": "MainPitchSlice",
+    "variations": [
+        {
+            "id": "default",
+            "name": "Default",
+            "docURL": "...",
+            "version": "initial",
+            "description": "Default",
+            "imageUrl": "",
+            "primary": {
+                "title": {
+                    "type": "StructuredText",
+                    "config": {
+                        "label": "Title",
+                        "placeholder": "",
+                        "allowTargetBlank": true,
+                        "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+                    }
+                },
+                "description": {
+                    "type": "StructuredText",
+                    "config": {
+                        "label": "Description",
+                        "placeholder": "",
+                        "allowTargetBlank": true,
+                        "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+                    }
+                },
+                "image": { "type": "Image", "config": { "label": "Image", "constraint": {}, "thumbnails": [] } },
+                "header": {
+                    "type": "StructuredText",
+                    "config": {
+                        "label": "Header",
+                        "placeholder": "",
+                        "allowTargetBlank": true,
+                        "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+                    }
+                }
+            },
+            "items": {
+                "contactlink": {
+                    "type": "Link",
+                    "config": { "label": "ContactLink", "placeholder": "", "select": null }
+                },
+                "contactbuttontext": { "type": "Text", "config": { "label": "ContactButtonText", "placeholder": "" } }
+            }
+        }
+    ]
+}

@@ -1,0 +1,42 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"maindescription": {
+				"__TYPE__": "FieldContent",
+				"value": "trip",
+				"type": "Text"
+			}
+		},
+		"items": [
+			{
+				"__TYPE__": "GroupItemContent",
+				"value": [
+					[
+						"question",
+						{
+							"__TYPE__": "FieldContent",
+							"value": "double",
+							"type": "Text"
+						}
+					],
+					[
+						"answer",
+						{
+							"__TYPE__": "StructuredTextContent",
+							"value": [
+								{
+									"type": "paragraph",
+									"content": {
+										"text": "Minim consequat laboris voluptate amet enim et cupidatat ex dolor fugiat do aliquip laborum irure."
+									}
+								}
+							]
+						}
+					]
+				]
+			}
+		]
+	}
+]

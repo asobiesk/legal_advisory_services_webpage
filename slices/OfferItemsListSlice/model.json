@@ -1,0 +1,20 @@
+{
+    "id": "offer_items_list_slice",
+    "type": "SharedSlice",
+    "name": "OfferItemsListSlice",
+    "description": "OfferItemsListSlice",
+    "variations": [
+        {
+            "id": "default",
+            "name": "Default",
+            "docURL": "...",
+            "version": "initial",
+            "description": "Default",
+            "imageUrl": "",
+            "primary": {
+                "offertarget": { "type": "Link", "config": { "label": "offerTarget", "select": "document" } }
+            },
+            "items": {}
+        }
+    ]
+}

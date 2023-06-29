@@ -1,0 +1,25 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"header": {
+				"__TYPE__": "FieldContent",
+				"value": "fifty",
+				"type": "Text"
+			},
+			"content": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Ad mollit commodo veniam enim irure duis ad officia adipisicing eiusmod duis ad ut esse minim. Cupidatat dolore ut dolore irure laborum magna culpa proident sunt aliquip voluptate nisi irure. Dolore ad nisi velit nostrud reprehenderit occaecat labore ad consequat occaecat."
+						}
+					}
+				]
+			}
+		},
+		"items": []
+	}
+]

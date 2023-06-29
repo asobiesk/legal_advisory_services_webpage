@@ -1,0 +1,15 @@
+{
+    "id": "footer",
+    "label": "Footer",
+    "format": "custom",
+    "repeatable": false,
+    "status": true,
+    "json": {
+        "Main": {
+            "copyright": { "type": "Text", "config": { "label": "copyright", "placeholder": "" } },
+            "cookies": { "type": "Text", "config": { "label": "cookies", "placeholder": "" } },
+            "privacylinktext": { "type": "Text", "config": { "label": "privacyLinkText", "placeholder": "" } },
+            "privacylink": { "type": "Link", "config": { "label": "privacyLink", "placeholder": "", "select": null } }
+        }
+    }
+}

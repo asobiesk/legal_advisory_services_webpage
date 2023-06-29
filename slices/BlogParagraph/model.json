@@ -1,0 +1,29 @@
+{
+    "id": "blog_paragraph",
+    "type": "SharedSlice",
+    "name": "BlogParagraph",
+    "description": "BlogParagraph",
+    "variations": [
+        {
+            "id": "default",
+            "name": "Default",
+            "docURL": "...",
+            "version": "initial",
+            "description": "Default",
+            "imageUrl": "",
+            "primary": {
+                "header": { "type": "Text", "config": { "label": "header", "placeholder": "" } },
+                "content": {
+                    "type": "StructuredText",
+                    "config": {
+                        "label": "content",
+                        "placeholder": "",
+                        "allowTargetBlank": true,
+                        "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+                    }
+                }
+            },
+            "items": {}
+        }
+    ]
+}

@@ -1,0 +1,27 @@
+{
+    "id": "team_slice",
+    "type": "SharedSlice",
+    "name": "TeamSlice",
+    "description": "TeamSlice",
+    "variations": [
+        {
+            "id": "default",
+            "name": "Default",
+            "docURL": "...",
+            "version": "initial",
+            "description": "Default",
+            "imageUrl": "",
+            "primary": {
+                "title": { "type": "Text", "config": { "label": "title", "placeholder": "" } },
+                "description": { "type": "Text", "config": { "label": "description", "placeholder": "" } },
+                "buttontext": { "type": "Text", "config": { "label": "buttonText", "placeholder": "" } },
+                "buttonlink": {
+                    "type": "Link",
+                    "config": { "label": "buttonLink", "placeholder": "", "select": null }
+                },
+                "image": { "type": "Image", "config": { "label": "image", "constraint": {}, "thumbnails": [] } }
+            },
+            "items": {}
+        }
+    ]
+}

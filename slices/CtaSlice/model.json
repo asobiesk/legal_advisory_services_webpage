@@ -1,0 +1,18 @@
+{
+    "id": "cta_slice",
+    "type": "SharedSlice",
+    "name": "CtaSlice",
+    "description": "CtaSlice",
+    "variations": [
+        {
+            "id": "default",
+            "name": "Default",
+            "docURL": "...",
+            "version": "initial",
+            "description": "Default",
+            "imageUrl": "",
+            "primary": {},
+            "items": {}
+        }
+    ]
+}

@@ -1,0 +1,5 @@
+{
+    "repositoryName": "here-to-stay",
+    "adapter": "@slicemachine/adapter-next",
+    "libraries": ["./slices"]
+}

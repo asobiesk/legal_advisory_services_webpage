@@ -1,0 +1,38 @@
+{
+    "id": "offer_item_description_slice",
+    "type": "SharedSlice",
+    "name": "OfferItemDescriptionSlice",
+    "description": "OfferItemDescriptionSlice",
+    "variations": [
+        {
+            "id": "default",
+            "name": "Default",
+            "docURL": "...",
+            "version": "initial",
+            "description": "Default",
+            "imageUrl": "",
+            "primary": {},
+            "items": {
+                "header": { "type": "Text", "config": { "label": "header", "placeholder": "" } },
+                "maintext": {
+                    "type": "StructuredText",
+                    "config": {
+                        "label": "mainText",
+                        "placeholder": "",
+                        "allowTargetBlank": true,
+                        "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+                    }
+                },
+                "highlightedtext": {
+                    "type": "StructuredText",
+                    "config": {
+                        "label": "highlightedText",
+                        "placeholder": "",
+                        "allowTargetBlank": true,
+                        "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+                    }
+                }
+            }
+        }
+    ]
+}

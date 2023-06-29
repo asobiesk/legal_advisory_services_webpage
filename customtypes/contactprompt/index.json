@@ -1,0 +1,15 @@
+{
+    "id": "contactprompt",
+    "label": "ContactPrompt",
+    "format": "custom",
+    "repeatable": false,
+    "status": true,
+    "json": {
+        "Main": {
+            "title": { "type": "Text", "config": { "label": "title", "placeholder": "" } },
+            "description": { "type": "Text", "config": { "label": "description", "placeholder": "" } },
+            "contactlink": { "type": "Link", "config": { "label": "contactLink", "placeholder": "", "select": null } },
+            "contactbuttontext": { "type": "Text", "config": { "label": "contactButtonText", "placeholder": "" } }
+        }
+    }
+}
