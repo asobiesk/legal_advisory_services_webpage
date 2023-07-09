@@ -11,7 +11,6 @@ import Image from "next/image";
 import Footer from "@/components/Footer";
 
 export default async function BlogPostPage(props) {
-    if (!props) return <></>;
     const { uid, lang } = props.params;
     const router = useRouter();
     const client = createClient();

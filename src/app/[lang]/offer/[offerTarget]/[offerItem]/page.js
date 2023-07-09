@@ -9,7 +9,7 @@ import Footer from "@/components/Footer";
 
 export default async function OfferItemPage(props) {
     if (!props) return <></>;
-    const { offerTarget, offerItem, lang } = props.params;
+    let { offerTarget, offerItem, lang } = props.params;
     if (!offerTarget) offerTarget = "for-foreigners";
     const client = createClient();
     const [navigation, page, footer] = await Promise.all([

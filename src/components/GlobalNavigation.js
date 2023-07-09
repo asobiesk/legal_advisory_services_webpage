@@ -1,14 +1,34 @@
+import { useState, useCallback, useEffect } from "react";
 import { PrismicLink, PrismicText } from "@prismicio/react";
 import { PrismicNextImage } from "@prismicio/next";
 import { PrismicNextLink } from "@prismicio/next";
 import { createClient } from "../../prismicio";
 
-export default async function GlobalNavigation(props) {
-    if (!props?.navigation) return <></>;
+export default function GlobalNavigation(props) {
+    const [showMenu, setShowMenu] = useState(false);
+    const [locales, setLocales] = useState([]);
     const { navigation, lang } = props;
-    const client = createClient();
-    const repository = await client.getRepository();
-    const locales = repository.languages;
+
+    const onMenuButtonClick = useCallback(
+        (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            setShowMenu((prevShowMenu) => !prevShowMenu);
+        },
+        [setShowMenu]
+    );
+
+    const fetchLocales = useCallback(async () => {
+        const client = createClient();
+        const repository = await client.getRepository();
+        setLocales(repository.languages);
+    }, []);
+
+    useEffect(() => {
+        fetchLocales();
+    }, []);
+
+    if (!props?.navigation) return <></>;
     return (
         <nav className="container">
             <div className="logo">
@@ -16,10 +36,10 @@ export default async function GlobalNavigation(props) {
                     <PrismicNextImage field={navigation.data.logo} />
                 </PrismicLink>
             </div>
-            <div className="menu">
-                {navigation.data.slices.map((slice) => {
+            <div className={`menu ${showMenu ? "show" : ""}`}>
+                {navigation.data.slices.map((slice, i) => {
                     return (
-                        <PrismicLink field={slice.primary.link}>
+                        <PrismicLink field={slice.primary.link} key={i}>
                             <PrismicText field={slice.primary.name} />
                         </PrismicLink>
                     );
@@ -47,6 +67,16 @@ export default async function GlobalNavigation(props) {
                     <PrismicLink field={navigation.data.contactlink} className="btn">
                         {navigation.data.contacttext}
                     </PrismicLink>
+                </div>
+            </div>
+            <div
+                id="mobile-nav-bttn"
+                className={`mobile-nav-bttn ${showMenu ? "show" : ""}`}
+                onClick={onMenuButtonClick}
+            >
+                <div>
+                    <span></span>
+                    <span></span>
                 </div>
             </div>
         </nav>

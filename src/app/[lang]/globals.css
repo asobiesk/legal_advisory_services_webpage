@@ -307,6 +307,10 @@ nav .btn {
     .mobile-nav-bttn {
         display: block;
     }
+
+    .reviews {
+        flex-direction: column;
+    }
 }
 
 .logo {

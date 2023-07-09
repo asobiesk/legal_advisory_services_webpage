@@ -3,7 +3,7 @@ const Map = () => {
     const apiKey = process.env.GOOGLE_API_KEY;
     return (
         <iframe
-            width="600"
+            width="100%"
             height="450"
             allowfullscreen
             referrerpolicy="no-referrer-when-downgrade"

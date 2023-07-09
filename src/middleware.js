@@ -26,7 +26,6 @@ async function initalizeLocales() {
     const repository = await client.getRepository();
     const locales = repository.languages.map((lang) => lang.id);
     validLocales = locales;
-    console.log(validLocales);
 }
 
 export const config = {

@@ -12,7 +12,7 @@ const MainPitchSlice = ({ slice }) => {
         <section data-slice-type={slice.slice_type} data-slice-variation={slice.variation} className="hero">
             <div className="container flex">
                 {/* Left Column */}
-                <div className="w-1/2">
+                <div className="col-2">
                     <PrismicRichText
                         field={slice.primary.title}
                         components={{ paragraph: ({ children }) => <span>{children}</span> }}
@@ -29,7 +29,7 @@ const MainPitchSlice = ({ slice }) => {
                 </div>
 
                 {/* Right Column */}
-                <div className="w-1/2 p-4">
+                <div className="col-2">
                     <PrismicNextImage field={slice.primary.image} />
                 </div>
             </div>

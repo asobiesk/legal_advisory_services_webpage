@@ -19,8 +19,6 @@ const OfferItemsListSlice = async ({ slice }) => {
         ],
     });
     const allOfferItemPages = response.results;
-    console.log(response.results);
-    console.log(allOfferItemPages.length);
     return (
         <section data-slice-type={slice.slice_type} data-slice-variation={slice.variation} className="container">
             <div className="offer__items">

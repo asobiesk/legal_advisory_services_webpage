@@ -14,8 +14,8 @@ const ClientReviewsSlice = ({ slice }) => {
         <section data-slice-type={slice.slice_type} data-slice-variation={slice.variation}>
             <Slider dots={true}>
                 {slice.items.map((item, i) => (
-                    <div key={i} className="container dark reviews no-pdd flex flex-row">
-                        <div class="col-2">
+                    <div key={i} className="container dark reviews no-pdd flex">
+                        <div class="col-2" style={{ height: "360px" }}>
                             <div>
                                 <p class="reviews__text">{item.review}</p>
                                 <p class="reviews__author">

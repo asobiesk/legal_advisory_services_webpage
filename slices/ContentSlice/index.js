@@ -17,7 +17,7 @@ const ContentSlice = ({ slice }) => {
             data-slice-variation={slice.variation}
             className="container first flex content"
         >
-            <div className="col-2 m-auto">
+            <div className="col-2 m-auto mb-8">
                 <h1 className="font-bold">
                     {slice.primary.displayreturnbutton ? (
                         <a className="cursor-pointer inline" onClick={() => router.back()}>

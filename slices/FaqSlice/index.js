@@ -6,7 +6,6 @@
 import { PrismicRichText } from "@prismicio/react";
 
 const FaqSlice = ({ slice }) => {
-    console.log(slice.items);
     return (
         <section
             data-slice-type={slice.slice_type}

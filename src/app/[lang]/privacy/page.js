@@ -2,7 +2,7 @@
 
 import { giveMePage } from "../../../../prismicio";
 import { SliceZone } from "@prismicio/react";
-import { components } from "../../../slices";
+import { components } from "../../../../slices";
 import GlobalNavigation from "@/components/GlobalNavigation";
 import Footer from "@/components/Footer";
 
