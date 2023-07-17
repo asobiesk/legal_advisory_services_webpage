@@ -9,7 +9,7 @@ export default function Footer({ footer }) {
                 <div className="copyrights">
                     <span>{footer.data.copyright}</span>
                     <a href="#top">
-                        <img src="https://heretostay.pl/static/images/icon_arrow-up.svg" alt="" />
+                        <img src="/icon_arrow-up.svg" alt="" />
                     </a>
                 </div>
                 <div className="cookies">
