@@ -14,7 +14,7 @@ export default async function OfferItemPage(props) {
     const client = createClient();
     const [navigation, page, footer] = await Promise.all([
         giveMePage("globalnavigation", lang),
-        client.getByUID("offeritempage", offerItem),
+        client.getByUID("offeritempage", offerItem, { lang: lang }),
         giveMePage("footer", lang),
     ]);
     return (

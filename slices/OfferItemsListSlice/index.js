@@ -17,6 +17,7 @@ const OfferItemsListSlice = async ({ slice }) => {
                 field: "document.first_publication_date",
             },
         ],
+        lang: "*",
     });
     const allOfferItemPages = response.results;
     return (
