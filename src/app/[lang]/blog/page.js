@@ -10,7 +10,6 @@ import Footer from "@/components/Footer";
 
 export default async function BlogPage(props) {
     const lang = props?.params?.lang ?? "";
-
     const client = createClient();
     const [navigation, page, blogPosts, footer] = await Promise.all([
         giveMePage("globalnavigation", lang),
@@ -22,7 +21,7 @@ export default async function BlogPage(props) {
                     direction: "desc",
                 },
             ],
-            lang: "*",
+            lang: props.params.lang,
         }),
         giveMePage("footer", lang),
     ]);
@@ -33,26 +32,28 @@ export default async function BlogPage(props) {
                 <h1>Blog</h1>
                 <div className="flex flex-wrap">
                     {blogPosts.map((post, i) => {
-                        return (
-                            <div className="col-4 blog__item" key={`blogpost${i}`}>
-                                <PrismicLink document={post}>
-                                    <PrismicNextImage field={post.data.image} />
-                                </PrismicLink>
-                                <div className="flex">
-                                    {post.tags.map((tag, tagId) => (
-                                        <span className="badge" key={`blogPost${i}tag${tagId}`}>
-                                            {tag}
-                                        </span>
-                                    ))}
+                        {
+                            return (
+                                <div className="col-4 blog__item" key={`blogpost${i}`}>
+                                    <PrismicLink document={post}>
+                                        <PrismicNextImage field={post.data.image} />
+                                    </PrismicLink>
+                                    <div className="flex">
+                                        {post.tags.map((tag, tagId) => (
+                                            <span className="badge" key={`blogPost${i}tag${tagId}`}>
+                                                {tag}
+                                            </span>
+                                        ))}
+                                    </div>
+                                    <h2 className="h3">
+                                        <PrismicLink document={post}>{post.data.title}</PrismicLink>
+                                    </h2>
+                                    <p className="date">
+                                        {new Date(post.last_publication_date).toLocaleDateString("en-GB")}
+                                    </p>
                                 </div>
-                                <h2 className="h3">
-                                    <PrismicLink document={post}>{post.data.title}</PrismicLink>
-                                </h2>
-                                <p className="date">
-                                    {new Date(post.last_publication_date).toLocaleDateString("en-GB")}
-                                </p>
-                            </div>
-                        );
+                            );
+                        }
                     })}
                 </div>
             </section>

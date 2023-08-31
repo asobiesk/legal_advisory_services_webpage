@@ -13,10 +13,11 @@ import Footer from "@/components/Footer";
 export default async function BlogPostPage(props) {
     const { uid, lang } = props.params;
     const router = useRouter();
+    if (!lang) return <></>;
     const client = createClient();
     const [navigation, page, footer] = await Promise.all([
         giveMePage("globalnavigation", lang),
-        client.getByUID("blogpost", uid, { lang: "*" }),
+        client.getByUID("blogpost", uid, { lang: props.params.lang }),
         giveMePage("footer", lang),
     ]);
     const formattedDate = new Date(page.last_publication_date).toLocaleDateString("en-GB");
