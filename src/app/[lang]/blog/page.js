@@ -22,6 +22,7 @@ export default async function BlogPage(props) {
                     direction: "desc",
                 },
             ],
+            lang: "*",
         }),
         giveMePage("footer", lang),
     ]);

@@ -46,7 +46,7 @@ export default function GlobalNavigation(props) {
                 })}
                 <div className="flex">
                     <div>
-                        <a href="#" class="lang">
+                        <a href="#" className="lang">
                             <img src="/icon_lang.svg" alt="Lang" />
                             {lang.split("-")[0]}
                         </a>
