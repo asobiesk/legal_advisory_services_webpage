@@ -20,7 +20,7 @@ export default async function OfferItemPage(props) {
     return (
         <>
             <GlobalNavigation navigation={navigation} lang={lang} />
-            <OfferNavigation activePage={offerTarget} />
+            <OfferNavigation activePage={offerTarget} lang={lang} />
             <SliceZone slices={page.data.slices} components={components} context={{ lang: lang }} />
             <Footer footer={footer} />
         </>
