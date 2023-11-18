@@ -1,25 +1,21 @@
 {
-    "id": "homepage",
-    "label": "HomePage",
+    "id": "faqindividualquestion",
+    "label": "FAQIndividualQuestion",
     "format": "page",
-    "repeatable": false,
+    "repeatable": true,
     "status": true,
     "json": {
         "Main": {
-            "title": { "type": "Text", "config": { "label": "Title", "placeholder": "" } },
-            "uid": { "type": "UID", "config": { "label": "uid", "placeholder": "" } },
+            "uid": { "config": { "label": "UID" }, "type": "UID" },
+            "question": { "type": "Text", "config": { "label": "question", "placeholder": "" } },
             "slices": {
                 "type": "Slices",
                 "fieldset": "Slice Zone",
                 "config": {
                     "choices": {
-                        "main_pitch_slice": { "type": "SharedSlice" },
-                        "features_slice": { "type": "SharedSlice" },
-                        "client_types_slice": { "type": "SharedSlice" },
-                        "client_reviews_slice": { "type": "SharedSlice" },
-                        "cta_slice": { "type": "SharedSlice" },
-                        "company_logos": { "type": "SharedSlice" },
-                        "youtube_player": { "type": "SharedSlice" }
+                        "blog_paragraph": { "type": "SharedSlice" },
+                        "youtube_player": { "type": "SharedSlice" },
+                        "cta_slice": { "type": "SharedSlice" }
                     }
                 }
             }

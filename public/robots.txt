@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://heretostay.pl
+
+# Sitemaps
+Sitemap: https://heretostay.pl/sitemap.xml

@@ -1,0 +1,18 @@
+{
+    "id": "company_logos",
+    "type": "SharedSlice",
+    "name": "CompanyLogos",
+    "description": "CompanyLogos",
+    "variations": [
+        {
+            "id": "default",
+            "name": "Default",
+            "docURL": "...",
+            "version": "initial",
+            "description": "Default",
+            "imageUrl": "",
+            "primary": { "title": { "type": "Text", "config": { "label": "title", "placeholder": "" } } },
+            "items": { "logo": { "type": "Image", "config": { "label": "logo", "constraint": {}, "thumbnails": [] } } }
+        }
+    ]
+}

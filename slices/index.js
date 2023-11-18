@@ -6,6 +6,7 @@ export const components = {
     blog_paragraph: dynamic(() => import("./BlogParagraph")),
     client_reviews_slice: dynamic(() => import("./ClientReviewsSlice")),
     client_types_slice: dynamic(() => import("./ClientTypesSlice")),
+    company_logos: dynamic(() => import("./CompanyLogos")),
     content_slice: dynamic(() => import("./ContentSlice")),
     cta_slice: dynamic(() => import("./CtaSlice")),
     faq_slice: dynamic(() => import("./FaqSlice")),
@@ -15,4 +16,5 @@ export const components = {
     offer_item_description_slice: dynamic(() => import("./OfferItemDescriptionSlice")),
     offer_items_list_slice: dynamic(() => import("./OfferItemsListSlice")),
     team_slice: dynamic(() => import("./TeamSlice")),
+    youtube_player: dynamic(() => import("./YoutubePlayer")),
 };

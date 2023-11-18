@@ -56,6 +56,10 @@ const routes = [
         type: "privacypage",
         path: "/privacy",
     },
+    {
+        type: "faqindividualquestion",
+        path: "/:lang?/faq/:uid",
+    },
 ];
 
 /**

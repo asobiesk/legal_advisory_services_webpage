@@ -323,7 +323,7 @@ nav .btn {
 .lang {
     padding: 0.5rem;
     display: flex;
-    line-height: 1.5rem;
+    line-height: 2rem;
     margin-right: 1rem;
 }
 .lang:hover ~ .lang_menu,
@@ -610,4 +610,71 @@ footer .cookies p {
     list-style-position: inside !important;
     padding-left: 2rem;
     font-size: 15px;
+}
+
+.logos {
+    margin-top: 8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.logos-slide {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.logos-slide img {
+    height: 100px;
+    width: 100px;
+    margin: 0 40px;
+    margin-top: 2rem;
+    transition: box-shadow 0.3s;
+    border-radius: 10px;
+}
+
+.logos-slide img:hover {
+    box-shadow: 0 0 11px rgba(33, 33, 33, 0.2);
+}
+
+@media only screen and (max-width: 420px) {
+    .logos-slide img {
+        height: 30px;
+        width: 30px;
+        margin: 0 40px;
+        margin-top: 1rem;
+        transition: box-shadow 0.3s;
+        border-radius: 10px;
+    }
+}
+
+.social-icon-box {
+    display: flex;
+    height: 3rem;
+}
+
+.social-icon img {
+    width: 25px;
+    margin: 0px;
+}
+
+.contact-btn-nav {
+    height: 3rem;
+}
+
+.youtube {
+    margin-top: 2rem;
+    width: 1280px;
+    height: 720px;
+}
+
+@media only screen and (max-width: 420px) {
+    .youtube {
+        margin-top: 4rem;
+        width: 20rem;
+        height: 15rem;
+    }
 }

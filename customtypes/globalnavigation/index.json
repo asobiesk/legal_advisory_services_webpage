@@ -10,6 +10,18 @@
             "mainlink": { "type": "Link", "config": { "label": "mainlink", "placeholder": "", "select": null } },
             "contactlink": { "type": "Link", "config": { "label": "contactLink", "placeholder": "", "select": null } },
             "contacttext": { "type": "Text", "config": { "label": "contacttext", "placeholder": "" } },
+            "facebooklink": {
+                "type": "Link",
+                "config": { "label": "facebookLink", "placeholder": "", "select": null }
+            },
+            "whatsapplink": {
+                "type": "Link",
+                "config": { "label": "whatsappLink", "placeholder": "", "select": null }
+            },
+            "instagramlink": {
+                "type": "Link",
+                "config": { "label": "instagramLink", "placeholder": "", "select": null }
+            },
             "slices": {
                 "type": "Slices",
                 "fieldset": "Slice Zone",

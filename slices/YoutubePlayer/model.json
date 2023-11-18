@@ -1,0 +1,21 @@
+{
+    "id": "youtube_player",
+    "type": "SharedSlice",
+    "name": "YoutubePlayer",
+    "description": "YoutubePlayer",
+    "variations": [
+        {
+            "id": "default",
+            "name": "Default",
+            "docURL": "...",
+            "version": "initial",
+            "description": "Default",
+            "imageUrl": "",
+            "primary": {
+                "title": { "type": "Text", "config": { "label": "title", "placeholder": "" } },
+                "videoid": { "type": "Text", "config": { "label": "videoId", "placeholder": "" } }
+            },
+            "items": {}
+        }
+    ]
+}

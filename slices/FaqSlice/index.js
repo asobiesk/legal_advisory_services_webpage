@@ -3,7 +3,7 @@
  * @typedef {import("@prismicio/react").SliceComponentProps<FaqSliceSlice>} FaqSliceProps
  * @param {FaqSliceProps}
  */
-import { PrismicRichText } from "@prismicio/react";
+import { PrismicLink } from "@prismicio/react";
 
 const FaqSlice = ({ slice }) => {
     return (
@@ -22,8 +22,9 @@ const FaqSlice = ({ slice }) => {
             <div className="col-2">
                 {slice.items.map((item, i) => (
                     <div key={i} className="faq-answers">
-                        <h2 className="h3 font-bold">{item.question}</h2>
-                        <PrismicRichText field={item.answer} />
+                        <PrismicLink field={item.detailslink} key={i} classname="faq-question">
+                            <h2 className="h3 font-bold">{item.question}</h2>
+                        </PrismicLink>
                     </div>
                 ))}
             </div>

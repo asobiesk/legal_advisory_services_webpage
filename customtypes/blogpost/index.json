@@ -23,7 +23,11 @@
                 "type": "Slices",
                 "fieldset": "Slice Zone",
                 "config": {
-                    "choices": { "blog_paragraph": { "type": "SharedSlice" }, "cta_slice": { "type": "SharedSlice" } }
+                    "choices": {
+                        "blog_paragraph": { "type": "SharedSlice" },
+                        "cta_slice": { "type": "SharedSlice" },
+                        "youtube_player": { "type": "SharedSlice" }
+                    }
                 }
             }
         },

@@ -254,7 +254,7 @@ interface BlogpostDocumentData {
  * Slice for *BlogPost → Slice Zone*
  *
  */
-type BlogpostDocumentDataSlicesSlice = BlogParagraphSlice | CtaSliceSlice;
+type BlogpostDocumentDataSlicesSlice = BlogParagraphSlice | CtaSliceSlice | YoutubePlayerSlice;
 /**
  * BlogPost document from Prismic
  *
@@ -495,6 +495,83 @@ export type ContactpromptDocument<Lang extends string = string> = prismic.Prismi
     "contactprompt",
     Lang
 >;
+/** Content for FAQIndividualQuestion documents */
+interface FaqindividualquestionDocumentData {
+    /**
+     * question field in *FAQIndividualQuestion*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: faqindividualquestion.question
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    question: prismic.KeyTextField;
+    /**
+     * Slice Zone field in *FAQIndividualQuestion*
+     *
+     * - **Field Type**: Slice Zone
+     * - **Placeholder**: *None*
+     * - **API ID Path**: faqindividualquestion.slices[]
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/slices
+     *
+     */
+    slices: prismic.SliceZone<FaqindividualquestionDocumentDataSlicesSlice>;
+    /**
+     * Meta Description field in *FAQIndividualQuestion*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: A brief summary of the page
+     * - **API ID Path**: faqindividualquestion.meta_description
+     * - **Tab**: SEO & Metadata
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    meta_description: prismic.RichTextField;
+    /**
+     * Meta Image field in *FAQIndividualQuestion*
+     *
+     * - **Field Type**: Image
+     * - **Placeholder**: *None*
+     * - **API ID Path**: faqindividualquestion.meta_image
+     * - **Tab**: SEO & Metadata
+     * - **Documentation**: https://prismic.io/docs/core-concepts/image
+     *
+     */
+    meta_image: prismic.ImageField<never>;
+    /**
+     * Meta Title field in *FAQIndividualQuestion*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: A title of the page used for social media and search engines
+     * - **API ID Path**: faqindividualquestion.meta_title
+     * - **Tab**: SEO & Metadata
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    meta_title: prismic.KeyTextField;
+}
+/**
+ * Slice for *FAQIndividualQuestion → Slice Zone*
+ *
+ */
+type FaqindividualquestionDocumentDataSlicesSlice = BlogParagraphSlice | YoutubePlayerSlice | CtaSliceSlice;
+/**
+ * FAQIndividualQuestion document from Prismic
+ *
+ * - **API ID**: `faqindividualquestion`
+ * - **Repeatable**: `true`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type FaqindividualquestionDocument<Lang extends string = string> = prismic.PrismicDocumentWithUID<
+    Simplify<FaqindividualquestionDocumentData>,
+    "faqindividualquestion",
+    Lang
+>;
 /** Content for FaqPage documents */
 interface FaqpageDocumentData {
     /**
@@ -669,6 +746,39 @@ interface GlobalnavigationDocumentData {
      */
     contacttext: prismic.KeyTextField;
     /**
+     * facebookLink field in *GlobalNavigation*
+     *
+     * - **Field Type**: Link
+     * - **Placeholder**: *None*
+     * - **API ID Path**: globalnavigation.facebooklink
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
+     *
+     */
+    facebooklink: prismic.LinkField;
+    /**
+     * whatsappLink field in *GlobalNavigation*
+     *
+     * - **Field Type**: Link
+     * - **Placeholder**: *None*
+     * - **API ID Path**: globalnavigation.whatsapplink
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
+     *
+     */
+    whatsapplink: prismic.LinkField;
+    /**
+     * instagramLink field in *GlobalNavigation*
+     *
+     * - **Field Type**: Link
+     * - **Placeholder**: *None*
+     * - **API ID Path**: globalnavigation.instagramlink
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
+     *
+     */
+    instagramlink: prismic.LinkField;
+    /**
      * Slice Zone field in *GlobalNavigation*
      *
      * - **Field Type**: Slice Zone
@@ -766,7 +876,9 @@ type HomepageDocumentDataSlicesSlice =
     | FeaturesSliceSlice
     | ClientTypesSliceSlice
     | ClientReviewsSliceSlice
-    | CtaSliceSlice;
+    | CtaSliceSlice
+    | CompanyLogosSlice
+    | YoutubePlayerSlice;
 /**
  * HomePage document from Prismic
  *
@@ -1062,6 +1174,7 @@ export type AllDocumentTypes =
     | BlogpostDocument
     | ContactpageDocument
     | ContactpromptDocument
+    | FaqindividualquestionDocument
     | FaqpageDocument
     | FooterDocument
     | GlobalnavigationDocument
@@ -1295,6 +1408,65 @@ type ClientTypesSliceSliceVariation = ClientTypesSliceSliceDefault;
  */
 export type ClientTypesSliceSlice = prismic.SharedSlice<"client_types_slice", ClientTypesSliceSliceVariation>;
 /**
+ * Primary content in CompanyLogos → Primary
+ *
+ */
+interface CompanyLogosSliceDefaultPrimary {
+    /**
+     * title field in *CompanyLogos → Primary*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: company_logos.primary.title
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    title: prismic.KeyTextField;
+}
+/**
+ * Item in CompanyLogos → Items
+ *
+ */
+export interface CompanyLogosSliceDefaultItem {
+    /**
+     * logo field in *CompanyLogos → Items*
+     *
+     * - **Field Type**: Image
+     * - **Placeholder**: *None*
+     * - **API ID Path**: company_logos.items[].logo
+     * - **Documentation**: https://prismic.io/docs/core-concepts/image
+     *
+     */
+    logo: prismic.ImageField<never>;
+}
+/**
+ * Default variation for CompanyLogos Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: `Default`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type CompanyLogosSliceDefault = prismic.SharedSliceVariation<
+    "default",
+    Simplify<CompanyLogosSliceDefaultPrimary>,
+    Simplify<CompanyLogosSliceDefaultItem>
+>;
+/**
+ * Slice variation for *CompanyLogos*
+ *
+ */
+type CompanyLogosSliceVariation = CompanyLogosSliceDefault;
+/**
+ * CompanyLogos Shared Slice
+ *
+ * - **API ID**: `company_logos`
+ * - **Description**: `CompanyLogos`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type CompanyLogosSlice = prismic.SharedSlice<"company_logos", CompanyLogosSliceVariation>;
+/**
  * Primary content in ContentSlice → Primary
  *
  */
@@ -1452,6 +1624,16 @@ export interface FaqSliceSliceDefaultItem {
      *
      */
     answer: prismic.RichTextField;
+    /**
+     * detailsLink field in *FaqSlice → Items*
+     *
+     * - **Field Type**: Link
+     * - **Placeholder**: *None*
+     * - **API ID Path**: faq_slice.items[].detailslink
+     * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
+     *
+     */
+    detailslink: prismic.LinkField;
 }
 /**
  * Default variation for FaqSlice Slice
@@ -1929,6 +2111,59 @@ type TeamSliceSliceVariation = TeamSliceSliceDefault;
  *
  */
 export type TeamSliceSlice = prismic.SharedSlice<"team_slice", TeamSliceSliceVariation>;
+/**
+ * Primary content in YoutubePlayer → Primary
+ *
+ */
+interface YoutubePlayerSliceDefaultPrimary {
+    /**
+     * title field in *YoutubePlayer → Primary*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: youtube_player.primary.title
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    title: prismic.KeyTextField;
+    /**
+     * videoId field in *YoutubePlayer → Primary*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: youtube_player.primary.videoid
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    videoid: prismic.KeyTextField;
+}
+/**
+ * Default variation for YoutubePlayer Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: `Default`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type YoutubePlayerSliceDefault = prismic.SharedSliceVariation<
+    "default",
+    Simplify<YoutubePlayerSliceDefaultPrimary>,
+    never
+>;
+/**
+ * Slice variation for *YoutubePlayer*
+ *
+ */
+type YoutubePlayerSliceVariation = YoutubePlayerSliceDefault;
+/**
+ * YoutubePlayer Shared Slice
+ *
+ * - **API ID**: `youtube_player`
+ * - **Description**: `YoutubePlayer`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type YoutubePlayerSlice = prismic.SharedSlice<"youtube_player", YoutubePlayerSliceVariation>;
 declare module "@prismicio/client" {
     interface CreateClient {
         (repositoryNameOrEndpoint: string, options?: prismic.ClientConfig): prismic.Client<AllDocumentTypes>;
@@ -1949,6 +2184,9 @@ declare module "@prismicio/client" {
             ContactpageDocument,
             ContactpromptDocumentData,
             ContactpromptDocument,
+            FaqindividualquestionDocumentData,
+            FaqindividualquestionDocumentDataSlicesSlice,
+            FaqindividualquestionDocument,
             FaqpageDocumentData,
             FaqpageDocumentDataSlicesSlice,
             FaqpageDocument,
@@ -1983,6 +2221,11 @@ declare module "@prismicio/client" {
             ClientTypesSliceSliceDefault,
             ClientTypesSliceSliceVariation,
             ClientTypesSliceSlice,
+            CompanyLogosSliceDefaultPrimary,
+            CompanyLogosSliceDefaultItem,
+            CompanyLogosSliceDefault,
+            CompanyLogosSliceVariation,
+            CompanyLogosSlice,
             ContentSliceSliceDefaultPrimary,
             ContentSliceSliceDefault,
             ContentSliceSliceVariation,
@@ -2022,6 +2265,10 @@ declare module "@prismicio/client" {
             TeamSliceSliceDefault,
             TeamSliceSliceVariation,
             TeamSliceSlice,
+            YoutubePlayerSliceDefaultPrimary,
+            YoutubePlayerSliceDefault,
+            YoutubePlayerSliceVariation,
+            YoutubePlayerSlice,
         };
     }
 }
